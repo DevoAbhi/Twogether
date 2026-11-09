@@ -1,0 +1,225 @@
+/* ---------- Card & buttons ---------- */
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--peach), var(--blush));
+  text-align: center;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-radius: 999px;
+  background: var(--brown);
+  color: var(--cream);
+  padding: 12px 22px;
+  font: 500 1rem Poppins, sans-serif;
+  text-align: center;
+  cursor: pointer;
+}
+.btn.rose { background: var(--rose); }
+.btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.chip {
+  border: 0;
+  border-radius: 999px;
+  background: var(--blush);
+  padding: 6px 16px;
+  font: 0.85rem Poppins, sans-serif;
+  cursor: pointer;
+}
+.chip.on {
+  background: var(--brown);
+  color: var(--cream);
+}
+
+/* ---------- Forms ---------- */
+.input {
+  width: 100%;
+  margin: 6px 0 12px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 227, 213, 0.6);
+  padding: 10px 18px;
+  font: 1rem Poppins, sans-serif;
+  outline: 0;
+}
+
+/* ---------- Progress bar ---------- */
+.bar {
+  display: flex;
+  height: 10px;
+  margin: 8px 0;
+  overflow: hidden;
+  border-radius: 99px;
+  background: var(--blush);
+}
+.bar i {
+  display: block;
+  height: 100%;
+  background: var(--rose);
+}
+.bar i.dark { background: var(--brown); }
+
+/* ---------- Dashboard ---------- */
+.big-number { font-size: 3.6rem; line-height: 1.1; }
+.unit       { font-size: 1.4rem; }
+.stats      { gap: 24px; margin-top: 10px; }
+.level      { margin: 10px 0 4px; font-size: 0.9rem; }
+.next-title { font-size: 1.25rem; }
+
+/* ---------- Earn & rewards ---------- */
+.activity-card {
+  border: 0;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.activity-card:hover { transform: translateY(-3px); }
+.activity-card .accent { margin-top: 8px; }
+
+.estimate { font-size: 2rem; margin-bottom: 12px; }
+.price    { font-size: 1.25rem; margin: 8px 0; }
+.big-emoji { font-size: 3rem; }
+
+.tile {
+  display: grid;
+  place-items: center;
+  height: 96px;
+  margin-bottom: 8px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, var(--peach), var(--blush));
+  font-size: 3rem;
+}
+
+/* ---------- Achievements ---------- */
+.achievement {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.achievement.locked { opacity: 0.7; }
+.achievement-icon { font-size: 2rem; }
+
+/* ---------- History ---------- */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-left: 14px;
+  border-left: 2px solid rgba(223, 166, 160, 0.5);
+}
+.history-xp { font-size: 1.2rem; color: var(--brown); }
+.history-xp.spent { color: #c47f78; }
+.note { margin-top: 6px; font-size: 0.9rem; }
+.thumb {
+  height: 130px;
+  margin-top: 8px;
+  border-radius: 16px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.line {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(245, 213, 213, 0.6);
+  font-size: 0.9rem;
+}
+.line:last-child { border-bottom: 0; }
+
+/* ---------- Gate & profile select ---------- */
+.gate         { width: 100%; max-width: 380px; }
+.select-wrap  { width: 100%; max-width: 560px; }
+.select-title { margin-bottom: 28px; }
+.profile-name { font-size: 1.3rem; }
+
+.profile-card {
+  border: 0;
+  border-radius: 24px;
+  background: linear-gradient(var(--blush), var(--peach));
+  padding: 26px;
+  box-shadow: var(--shadow);
+  font: inherit;
+  cursor: pointer;
+}
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  background: var(--cream);
+  font-size: 2.4rem;
+}
+
+/* ---------- Modal, toast, celebration, skeleton ---------- */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgba(57, 48, 46, 0.4);
+}
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 24px;
+  background: var(--cream);
+  padding: 24px;
+}
+.modal img { width: 100%; border-radius: 16px; }
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.toast {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  z-index: 60;
+  transform: translateX(-50%);
+  border-radius: 99px;
+  background: var(--brown);
+  color: var(--cream);
+  padding: 10px 20px;
+  font-size: 0.9rem;
+}
+
+.celebration {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 249, 242, 0.75);
+  font-size: 2.2rem;
+  text-align: center;
+  pointer-events: none;
+}
+.celebration-emoji { font-size: 3rem; }
+
+.skeleton {
+  height: 160px;
+  border-radius: 24px;
+  background: var(--blush);
+  animation: pulse 1.2s infinite;
+}
+@keyframes pulse {
+  50% { opacity: 0.5; }
+}

@@ -1,0 +1,84 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 16px 16px 110px;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+}
+
+.full-screen {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 12px;
+}
+.two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.row      { display: flex; flex-wrap: wrap; gap: 8px; }
+.centered { justify-content: center; }
+.between  { display: flex; justify-content: space-between; gap: 10px; }
+
+/* ---------- Navigation: bottom bar on mobile ---------- */
+.nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 40;
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+  background: rgba(255, 249, 242, 0.95);
+  box-shadow: 0 -4px 20px rgba(223, 166, 160, 0.25);
+}
+.nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 4px 10px;
+  color: var(--brown);
+  font-size: 0.72rem;
+}
+.nav a.active { color: var(--rose); }
+
+/* ---------- Navigation: top bar on tablet / desktop ---------- */
+@media (min-width: 768px) {
+  .page { padding-top: 80px; }
+
+  .nav {
+    top: 0;
+    bottom: auto;
+    justify-content: center;
+    gap: 28px;
+    box-shadow: none;
+  }
+  .nav a {
+    flex-direction: row;
+    gap: 8px;
+    font-size: 0.9rem;
+  }
+}

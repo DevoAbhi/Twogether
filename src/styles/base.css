@@ -1,0 +1,35 @@
+:root {
+  --cream: #FFF9F2;
+  --peach: #FFE3D5;
+  --rose: #DFA6A0;
+  --blush: #F5D5D5;
+  --brown: #6B5148;
+  --ink: #39302E;
+  --shadow: 0 4px 18px rgba(223, 166, 160, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: Poppins, system-ui, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.serif   { font-family: Fraunces, Georgia, serif; }
+.muted   { color: var(--brown); font-size: 0.85rem; }
+.small   { font-size: 0.9rem; }
+.strong  { font-weight: 500; }
+.accent  { color: #c47f78; }
+.center  { text-align: center; }
+.grow    { flex: 1; }
+.spaced  { margin-bottom: 10px; }
+.error   { color: #a33; font-size: 0.85rem; margin-bottom: 8px; }
